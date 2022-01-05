@@ -1,0 +1,28 @@
+# List that I use in pi-hole for blocking domains (mainly blocking advertisements ones [youtube, google, google play store])
+# So far it is working pretty good. I had one problem with youtube.com being blocked but I just added it to the white list.
+# I am running pi-hole on raspberry pi zero W with wireless connection to access point. Ip address for rpi is reserved on access point.
+# I've decided not to change settings on the access point, just do it per computer/mobile device (I have more controll over what device is using it, also it is easier to switch it of just for one device).
+
+
+https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+https://adaway.org/hosts.txt
+https://v.firebog.net/hosts/AdguardDNS.txt
+https://v.firebog.net/hosts/Admiral.txt
+https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
+https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt
+https://v.firebog.net/hosts/Easylist.txt
+https://pgl.yoyo.org/adservers/serverlist.php?hostformat=hosts&showintro=0&mimetype=plaintext
+https://raw.githubusercontent.com/FadeMind/hosts.extras/master/UncheckyAds/hosts
+https://raw.githubusercontent.com/bigdargon/hostsVN/master/hosts
+https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
+https://raw.githubusercontent.com/nickspaargaren/no-google/master/pihole-google.txt
+https://raw.githubusercontent.com/kboghdady/youTube_ads_4_pi-hole/master/youtubelist.txt
+https://blocklistproject.github.io/Lists/alt-version/ads-nl.txt
+https://www.github.developerdan.com/hosts/lists/ads-and-tracking-extended.txt
+
+
+
+
+
+
+
