@@ -1,0 +1,21 @@
+#Check what are the available connections
+root@pawel-Precision-WorkStation-T3500:/home/pawel# nmcli con show
+NAME                     UUID                                  TYPE      DEVICE          
+Połączenie przewodowe 2  82095518-0172-32fe-93de-f324d9b7ede2  ethernet  enp6s4          
+docker0                  d53ae2f6-03c4-4bfe-bfcf-dacae0b099a6  bridge    docker0         
+docker_gwbridge          9a7144cd-b670-430e-940d-065044731b42  bridge    docker_gwbridge 
+
+
+#Ignore automatic dns settings
+nmcli con mod 82095518-0172-32fe-93de-f324d9b7ede2   ipv4.ignore-auto-dns yes
+nmcli con mod 82095518-0172-32fe-93de-f324d9b7ede2   ipv6.ignore-auto-dns yes
+
+#Set up dns manually
+#In case rpi with pi-hole dies (160) I have another setting with access point (1)
+nmcli con mod 82095518-0172-32fe-93de-f324d9b7ede2   ipv4.dns "192.168.0.160 192.168.0.1"
+
+#Reload the configuration
+nmcli con down  82095518-0172-32fe-93de-f324d9b7ede2
+nmcli con up  82095518-0172-32fe-93de-f324d9b7ede2
+
+#After setting it up I checked with going to openbsd.org via browser then checking if query showed in rpi-hole and it did
